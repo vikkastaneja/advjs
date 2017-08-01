@@ -34,8 +34,9 @@
      event.preventDefault();
      var txt = document.getElementById("new-text");
      var h1 = document.getElementsByTagName("h1");
-     if (txt != "") {
-       h1[0].text = txt.text;
+     if (txt && txt.value.trim()) {
+       h1[0].textContent = txt.value;
+       txt.value = "";
      }
    });
 
